@@ -12,7 +12,10 @@
 4. 이미 처리된 영상은 제외하고 새 영상만 필터링한다.
 5. 새 영상 각각에 대해 `mmk youtube videotype https://youtube.com/watch?v={videoId}`를 실행하여 long-form인지 확인한다.
 6. Short는 제외하고 long-form 영상만 남긴다.
-7. 최종 결과를 아래 형식으로 출력한다:
+7. 각 영상에 대해 썸네일 URL을 생성한다:
+   - 형식: `https://i.ytimg.com/vi/{videoId}/hqdefault.jpg`
+   - hqdefault (480x360)는 모든 영상에서 항상 사용 가능하다.
+8. 최종 결과를 아래 형식으로 출력한다:
 
 ```json
 {
@@ -23,7 +26,8 @@
       "channelName": "...",
       "channelId": "...",
       "published": "...",
-      "url": "https://youtube.com/watch?v=..."
+      "url": "https://youtube.com/watch?v=...",
+      "thumbnailUrl": "https://i.ytimg.com/vi/.../hqdefault.jpg"
     }
   ],
   "total_checked": 0,
