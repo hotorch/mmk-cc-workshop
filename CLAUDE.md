@@ -4,7 +4,8 @@
 
 ## 프로젝트 목적
 
-이 프로젝트를 fork하여 Claude Code 웹에서 바로 자동화 바이브 코딩을 시작할 수 있습니다.
+이 프로젝트는 [pureugong/mmk-cc-workshop](https://github.com/pureugong/mmk-cc-workshop)에서 fork된 저장소입니다.
+원본 저장소를 fork하여 Claude Code 웹에서 바로 자동화 바이브 코딩을 시작할 수 있습니다.
 
 ## mmk CLI
 
