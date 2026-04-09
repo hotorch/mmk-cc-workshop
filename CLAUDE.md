@@ -42,6 +42,33 @@ mmk youtube videotype <youtube-url>
 - `mmk paymint ...` — 사용 불가
 - `mmk threads ...` — 사용 불가
 
+## YouTube 채널 모니터링 스킬
+
+4개 YouTube 채널의 새 영상을 감지하고, 자막 요약 → Slack 알림 → Notion 저장을 수행하는 자동화 스킬입니다.
+
+### 모니터링 대상 채널
+- Nate Herk | AI Automation
+- Nick Saraev
+- AICodeKing
+- Nick Puru | AI Automation
+
+### 사용 가능한 스킬
+
+| 스킬 | 설명 |
+|------|------|
+| `/check-youtube` | 전체 파이프라인 실행 (감지 → 요약 → 알림 → 저장) |
+| `/yt-summarize <url>` | 개별 영상 자막 추출 및 한국어 요약 |
+| `/yt-fetch-new-videos` | 새 long-form 영상 목록만 조회 |
+| `/yt-notify-slack` | 요약 결과를 Slack으로 전송 |
+| `/yt-save-notion` | 요약 결과를 Notion DB에 저장 |
+
+### 스케줄 실행
+
+```bash
+# 1시간마다 자동 모니터링
+/loop 1h /check-youtube
+```
+
 ## 세션 시작 시
 
 세션이 시작되면 `.claude/scripts/check-env.sh` 스크립트가 자동 실행되어 환경 정보를 출력합니다:
